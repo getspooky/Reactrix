@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+
+# IDE
+/.idea
+/.vscode
+
+# misc
+npm-debug.log
+yarn-error.log
+
+#test
+/coverage
