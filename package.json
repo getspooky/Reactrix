@@ -2,7 +2,7 @@
   "name": "use-validator",
   "version": "1.0.0",
   "description": "Simple, lightweight model-based validation for React",
-  "main": "jest.config.js",
+  "main": "index.js",
   "scripts": {
     "build": "node dist/build.js",
     "watch": "watch -p \"src/**/*.js\" -c \"yarn build\"",
