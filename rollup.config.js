@@ -7,7 +7,7 @@ import resolve from "rollup-plugin-node-resolve";
 const config = {
   input: "lib/index.js",
   output: {
-    name: "useValidator",
+    name: "use-validator",
     globals: {
       react: "React",
       "react-dom": "ReactDOM"
