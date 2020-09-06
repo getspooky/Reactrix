@@ -1,8 +1,6 @@
-<p style="text-align=center;">
-<img src="docs/screens/Cover.png">
-</p>
+# 👮 useValidator
 
-<p align="center">
+<p align="left">
 <img alt="GitHub version" src="https://img.shields.io/github/v/release/getspooky/useValidator?style=for-the-badge">
 <img alt="GitHub" src="https://img.shields.io/github/license/getspooky/useValidator?style=for-the-badge">
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/getspooky/useValidator?style=for-the-badge">
