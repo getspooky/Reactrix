@@ -23,3 +23,12 @@ Or with npm:
 ```sh
 npm install use-validator
 ```
+
+## Changelog 
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## License
+
+The `useValidator` Library is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
