@@ -12,6 +12,16 @@
 > Simple, lightweight model-based validation for React Hooks ⚛️
 
 
-<div align="center">
-  <sub>Created by <a href="https://github.com/getspooky">getspooky</a> and maintained with ❤️ by an amazing <a href="https://github.com/getspooky/useValidator/graphs/contributors">team of developers</a>.</sub>
-</div>
+## Installation
+
+Install it with yarn:
+
+```sh
+yarn add use-validator
+```
+
+Or with npm:
+
+```sh
+npm install use-validator
+```
