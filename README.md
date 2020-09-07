@@ -1,5 +1,7 @@
 # ⚛️ +🚦Reactrix
 
+Validation is the most important aspect while designing an application. It validates the incoming data. Reactrix provides a convenient method `useValidate` to validate incoming data with a variety of powerful validation rules.
+
 <p align="left">
 <img alt="GitHub version" src="https://img.shields.io/github/v/release/getspooky/useValidator?style=for-the-badge">
 <img alt="GitHub" src="https://img.shields.io/github/license/getspooky/useValidator?style=for-the-badge">
