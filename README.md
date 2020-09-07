@@ -26,6 +26,27 @@ Or with npm:
 npm install reactrix --save
 ```
 
+## Common Rules 
+
+| Keyword    |      Description   | 
+|------------|:-------------------|
+| `alpha`    |  Checks if the string contains only letter(a-zA-Z).| 
+| `alphaNum` | Checks if the string contains only letters and numbers.| 
+| `ascii`    | Checks if the string contains ASCII chars only.| 
+| `base32` | Checks if a string is base32 encoded.| 
+| `base64` | Checks if a string is base64 encoded.| 
+| `boolean` | Checks if a value is a boolean.| 
+| `date` | Checks if a value is a date.| 
+| `decimal` | Checks if a value is a decimal.| 
+| `email` | Checks if the string is an email.| 
+| `function` | Checks if the object is function.| 
+| `hexColor` | Checks if the string is a hexadecimal color.| 
+| `integer` | Checks if the value is an integer number.| 
+| `ipAddress` | Checks if the string is an IP (version 4 or 6).|
+| `lowercase` | Checks if the string is lowercase.| 
+| `mimeType` | 	Checks if the string matches to a valid [MIME type](https://en.wikipedia.org/wiki/Media_type) format.| 
+| `numeric` | Checks if a string is a number.| 
+
 ## Changelog 
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
