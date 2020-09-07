@@ -12,7 +12,7 @@ Validation is the most important aspect while designing an application. It valid
 > Simple, lightweight model-based validation for React Hooks
 
 
-## Installation
+## 📦 Installation
 
 Install it with yarn:
 
@@ -26,7 +26,7 @@ Or with npm:
 npm install reactrix --save
 ```
 
-## Common Rules 
+## 🚦Common Rules 
 
 | Keyword    |      Description   | 
 |------------|:-------------------|
@@ -47,11 +47,11 @@ npm install reactrix --save
 | `mimeType` | 	Checks if the string matches to a valid [MIME type](https://en.wikipedia.org/wiki/Media_type) format.| 
 | `numeric` | Checks if a string is a number.| 
 
-## Changelog 
+## 📋 Changelog 
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
-## License
+## 📝 License
 
 The `reactrix` Library is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
