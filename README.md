@@ -1,4 +1,4 @@
-# ⚛️ useValidator
+# ⚛️ Reactrix
 
 <p align="left">
 <img alt="GitHub version" src="https://img.shields.io/github/v/release/getspooky/useValidator?style=for-the-badge">
@@ -15,13 +15,13 @@
 Install it with yarn:
 
 ```sh
-yarn add use-validator
+yarn add reactrix --save
 ```
 
 Or with npm:
 
 ```sh
-npm install use-validator
+npm install reactrix --save
 ```
 
 ## Changelog 
