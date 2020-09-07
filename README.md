@@ -30,5 +30,5 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 ## License
 
-The `useValidator` Library is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The `reactrix` Library is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
