@@ -26,6 +26,57 @@ Or with npm:
 npm install reactrix --save
 ```
 
+## 🏷 Usage
+
+First of all let's define some validations in React components
+
+```jsx
+import React, { useState } from 'react';
+import { useValidator, AlertComponent } from 'reactrix';
+
+function Login(props) {
+  const [data, setData] = useState({});
+  const [msg, setValidator] = useValidator(null);
+  
+  const handleChange = (event) => {
+    setData({
+      ...data,
+      [event.target.name]: event.target.value
+    );
+  }
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setValidator(data, {
+      email: 'required|email|max:30',
+      password: 'required|string|min:8'
+    }); 
+    
+    if(!msg) {
+      alert('Great ✅');
+    }
+    
+  }
+   
+  return (
+    <form>  
+        <div className="container">   
+          <label>Email : </label>   
+          <input type="email" placeholder="Enter Email" name="email" onChange={handleChange} />  
+          <label>Password : </label>   
+          <input type="password" placeholder="Enter Password" name="password" onChange={handleChange} />  
+          <button type="submit" onClick={handleSubmit}>Login</button>     
+          Forgot <a href="#"> password? </a>   
+        </div>
+        <AlertComponent msg={msg} lang={'en'}  />
+      </form>
+  );
+  
+}
+
+```
+
+
 ## 🚦Common Rules 
 
 | Keyword          |      Description   | 
