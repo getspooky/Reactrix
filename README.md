@@ -133,6 +133,11 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 ## 📒 Samples
 Take a look on samples in [./sample](simple) for more examples of usages.
 
+## 👨‍💻 Contributing
+
+You are welcome to contribute to this project, but before you do, please make sure you read the [contribution guide](CONTRIBUTING.md).
+
+
 ## 📝 License
 
 The `reactrix` Library is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
