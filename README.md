@@ -130,6 +130,10 @@ function Login(props) {
 | `sha384` | Checks if the string is a valid sha384 algorithm                                                                        | 
 | `sha512` | Checks if the string is a valid sha512 algorithm                                                                        | 
 
+## 📢 Compatibility
+
+This library uses ES6 Promises so be sure to provide a polyfill for it for the browsers that do not support it.
+
 ## 📋 Changelog 
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
