@@ -9,8 +9,14 @@ Validation is the most important aspect while designing an application. It valid
 <img alt="GitHub issues" src="https://img.shields.io/github/issues/getspooky/useValidator?style=for-the-badge">
 </p>
 
-> Simple, lightweight model-based validation for React Hooks
+> Simple, lightweight model-based validation for React Hooks Inspired by [PHP Framework Laravel's validation](https://laravel.com/)
 
+## Features
+
+- 🤗 Familiar and easy to setup.
+- 🌍 i18n Support and error Messages in 30+ locales.
+- 👊 Written in JavaScript.
+- 🗃 No dependencies.
 
 ## 📦 Installation
 
