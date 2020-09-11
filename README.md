@@ -100,13 +100,11 @@ function Login(props) {
 | `numeric`        | Checks if a value is a number                                                                                   | 
 | `object`         | Checks if a value is an object                                                                                  |
 | `port`           | Checks if the string is a Port                                                                                  |
-| `object`         | Checks if a value is an object                                                                                  |
 | `string`         | Checks if the string is a string                                                                                |
 | `undefined`      | Checks if the string is undefined                                                                               |
 | `uppercase`      | Checks if the string is uppercase                                                                               |
 | `url`            | Checks if the string is url                                                                                     |
 | **Math**                                                                                                                           |
-| `equals`         | Checks if value equals ("===") comparison.                                                                      | 
 | `equals`         | Checks if value equals ("===") comparison.                                                                      | 
 | `max`            | Checks if the given number is less than or equal to given number                                                | 
 | `MaxLength`      | Checks if the string's length is not more than given number                                                     | 
