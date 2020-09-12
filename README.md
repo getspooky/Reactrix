@@ -9,8 +9,14 @@ Validation is the most important aspect while designing an application. It valid
 <img alt="GitHub issues" src="https://img.shields.io/github/issues/getspooky/useValidator?style=for-the-badge">
 </p>
 
-> Simple, lightweight model-based validation for React Hooks
+> Simple, lightweight model-based validation for React Hooks Inspired by [PHP Framework Laravel's validation](https://laravel.com/)
 
+## Features
+
+- 🤗 Familiar and easy to setup.
+- 🌍 i18n Support and error Messages in 30+ locales.
+- 👊 Written in JavaScript.
+- 🗃 No dependencies.
 
 ## 📦 Installation
 
@@ -100,13 +106,11 @@ function Login(props) {
 | `numeric`        | Checks if a value is a number                                                                                   | 
 | `object`         | Checks if a value is an object                                                                                  |
 | `port`           | Checks if the string is a Port                                                                                  |
-| `object`         | Checks if a value is an object                                                                                  |
 | `string`         | Checks if the string is a string                                                                                |
 | `undefined`      | Checks if the string is undefined                                                                               |
 | `uppercase`      | Checks if the string is uppercase                                                                               |
 | `url`            | Checks if the string is url                                                                                     |
 | **Math**                                                                                                                           |
-| `equals`         | Checks if value equals ("===") comparison.                                                                      | 
 | `equals`         | Checks if value equals ("===") comparison.                                                                      | 
 | `max`            | Checks if the given number is less than or equal to given number                                                | 
 | `MaxLength`      | Checks if the string's length is not more than given number                                                     | 
@@ -125,6 +129,10 @@ function Login(props) {
 | `sha256` | Checks if the string is a valid sha256 algorithm                                                                        | 
 | `sha384` | Checks if the string is a valid sha384 algorithm                                                                        | 
 | `sha512` | Checks if the string is a valid sha512 algorithm                                                                        | 
+
+## 📢 Compatibility
+
+This library uses ES6 Promises so be sure to provide a polyfill for it for the browsers that do not support it.
 
 ## 📋 Changelog 
 
