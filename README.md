@@ -75,7 +75,7 @@ function Login(props) {
           Forgot <a href="#"> password? </a>   
         </div>
         <AlertComponent msg={msg} lang={'en'}  />
-      </form>
+    </form>
   );
   
 }
