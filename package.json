@@ -13,11 +13,13 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "babelrc-rollup": "^3.0.0",
     "eslint": "^7.7.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
+    "jest": "^26.4.2",
     "rollup": "^2.26.9",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
