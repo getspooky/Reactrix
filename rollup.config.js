@@ -1,4 +1,5 @@
 import babel from "rollup-plugin-babel";
+import babelrc from 'babelrc-rollup';
 import uglify from "rollup-plugin-uglify";
 import replace from "rollup-plugin-replace";
 import commonjs from "rollup-plugin-commonjs";
@@ -15,9 +16,7 @@ const config = {
   },
   external: ["react", "react-dom"],
   plugins: [
-    babel({
-      exclude: "node_modules/**"
-    }),
+    babel(babelrc()),
     resolve(),
     commonjs({
       include: /node_modules/
