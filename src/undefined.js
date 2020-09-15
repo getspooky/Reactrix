@@ -1,3 +1,4 @@
 // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
 import { assertExp } from './common';
-export default assertExp('undefined', (val) => typeof val === 'undefined');
+import { isNullOrUndefined } from './utils/types';
+export default assertExp('undefined', (val) => isNullOrUndefined(val));
