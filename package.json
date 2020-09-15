@@ -13,6 +13,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babelrc-rollup": "^3.0.0",
     "eslint": "^7.7.0",
     "eslint-config-airbnb": "^18.2.0",
