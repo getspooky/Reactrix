@@ -5,7 +5,7 @@ let alphaNumRule = null;
 
 afterEach(() => alphaNumRule = null);
 
-test('validates that the string may only contains alphabetic characters', () => {
+test('validates that the string may only contains alphabetic and numeric characters', () => {
   // valid.
   alphaNumRule = validateRules('Hello1520', 'alphaNum');
   expect(getStackError(alphaNumRule)).toBe(0);
