@@ -11,22 +11,30 @@
     "build": "kcd-scripts build --bundle",
     "setup": "npm install && npm run validate -s",
     "test": "kcd-scripts test",
+    "lint": "kcd-scripts lint",
     "test:update": "npm test -- --updateSnapshot --coverage",
-    "validate": "kcd-scripts validate",
-    "lint": "eslint src"
+    "validate": "kcd-scripts validate"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.11.2"
   },
+  "peerDependencies": {
+    "react": "*"
+  },
   "devDependencies": {
-    "eslint": "^7.7.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.20.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "kcd-scripts": "^6.2.4",
     "jest-in-case": "^1.0.2"
-  }
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/kcd-scripts/eslint.js"
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "coverage",
+    "dist"
+  ]
 }
