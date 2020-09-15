@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Simple, lightweight model-based validation for React",
   "main": "index.js",
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
   "scripts": {
     "build": "node dist/build.js",
     "watch": "watch -p \"src/**/*.js\" -c \"yarn build\"",
