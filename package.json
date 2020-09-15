@@ -8,10 +8,11 @@
     "npm": ">=6"
   },
   "scripts": {
-    "build": "node dist/build.js",
-    "watch": "watch -p \"src/**/*.js\" -c \"yarn build\"",
-    "test": "jest",
-    "format": "prettier '**/*.js' --write",
+    "build": "kcd-scripts build --bundle",
+    "setup": "npm install && npm run validate -s",
+    "test": "kcd-scripts test",
+    "test:update": "npm test -- --updateSnapshot --coverage",
+    "validate": "kcd-scripts validate",
     "lint": "eslint src"
   },
   "author": "",
