@@ -19,7 +19,7 @@ export function isCallable(fn) {
   return typeof fn === 'function';
 }
 
-// Check if given argument is a string
+// Check if given argument is a string.
 export function isString(arr) {
   return typeof arr === 'string';
 }
