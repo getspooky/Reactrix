@@ -1,14 +1,14 @@
 import { validateRules, getStackError } from '../common';
 
-let uppercaseRule = null;
+let lowercaseRule = null;
 
-afterEach(() => uppercaseRule = null);
+afterEach(() => lowercaseRule = null);
 
-test('validates that the string is uppercase', () => {
+test('validates that the string is lowercase', () => {
   // valid.
-  uppercaseRule = validateRules('HI', 'uppercase');
-  expect(getStackError(uppercaseRule)).toBe(0);
+  lowercaseRule = validateRules('hi', 'lowercase');
+  expect(getStackError(lowercaseRule)).toBe(0);
   // invalid
-  uppercaseRule = validateRules('hi','uppercase');
-  expect(getStackError(uppercaseRule)).toBe(1);
+  lowercaseRule = validateRules('Hi','lowercase');
+  expect(getStackError(lowercaseRule)).toBe(1);
 });
