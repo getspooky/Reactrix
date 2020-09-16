@@ -1,0 +1,24 @@
+{
+  "projectName": "reactrix",
+  "projectOwner": "reactrix",
+  "repoType": "github",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "skipCi": false,
+  "contributors": [
+    {
+      "login": "getspooky",
+      "name": "Yasser ",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/37160072?s=460&u=6578a0a9d158c7ecb0afa5e8c9ec13194e736b3e&v=4",
+      "profile": "https://github.com/getspooky",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "test"
+      ]
+    },
+}
