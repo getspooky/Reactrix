@@ -1,5 +1,4 @@
 import { validateRules, getStackError } from '../common';
-import ascii from '../ascii';
 
 let asciiRule = null;
 

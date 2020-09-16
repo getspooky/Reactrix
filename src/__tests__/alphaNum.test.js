@@ -1,5 +1,4 @@
 import { validateRules, getStackError } from '../common';
-import alphaNum from '../alphaNum';
 
 let alphaNumRule = null;
 

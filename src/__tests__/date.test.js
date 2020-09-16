@@ -1,5 +1,4 @@
 import { validateRules, getStackError } from '../common';
-import alpha from '../alpha';
 
 let dateRule = null;
 

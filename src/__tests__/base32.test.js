@@ -1,5 +1,4 @@
 import { validateRules, getStackError } from '../common';
-import base32 from '../base32';
 
 let base32Rule = null;
 

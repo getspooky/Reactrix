@@ -1,5 +1,4 @@
 import { validateRules, getStackError } from '../common';
-import email from '../email';
 
 let emailRule = null;
 

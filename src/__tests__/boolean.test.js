@@ -1,5 +1,4 @@
 import { validateRules, getStackError } from '../common';
-import boolean from '../boolean';
 
 let booleanRule = null;
 

@@ -1,5 +1,4 @@
 import { validateRules, getStackError } from '../common';
-import decimal from '../decimal';
 
 let decimalRule = null;
 
