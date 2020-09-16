@@ -54,8 +54,8 @@ function Login(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     setValidator(data, {
-      email: 'required|email|max:30',
-      password: 'required|string|min:8'
+      email: 'required|email',
+      password: 'required|string'
     }); 
     
     if(!msg) {
