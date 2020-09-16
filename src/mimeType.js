@@ -1,6 +1,6 @@
 // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
 import { regex } from './common';
-import { multilineRegexp } from './utils/multilineRegexp';
+import { multilineRegexp } from './utils/multilineRegex';
 /*
   Checks if the provided string matches to a correct Media type format (MIME type)
   This function only checks is the string format follows the
