@@ -1,6 +1,4 @@
 // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
-// Structured similarly to vuelidate's common.js
-// https://github.com/vuelidate/vuelidate/blob/master/src/validators/common.js
 import { isString } from './utils/types';
 
 // Import rules from given path.
