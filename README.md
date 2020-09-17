@@ -111,24 +111,24 @@ function Login(props) {
 | `uppercase`      | Checks if the string is uppercase                                                                               |
 | `url`            | Checks if the string is url                                                                                     |
 | **Math**                                                                                                                           |
-| `math/equals`         | Checks if value equals ("===") comparison.                                                                      | 
-| `math/max`            | Checks if the given number is less than or equal to given number                                                | 
-| `math/MaxLength`      | Checks if the string's length is not more than given number                                                     | 
-| `math/min`            | Checks if the given number is more than or equal to given number                                                | 
-| `math/MinLength`      | Checks if the given number is less than or equal to given number                                                | 
+| `equals`         | Checks if value equals ("===") comparison.                                                                      | 
+| `max`            | Checks if the given number is less than or equal to given number                                                | 
+| `MaxLength`      | Checks if the string's length is not more than given number                                                     | 
+| `min`            | Checks if the given number is more than or equal to given number                                                | 
+| `MinLength`      | Checks if the given number is less than or equal to given number                                                | 
 | **ISO**                                                                                                                            |
-| `iso/ISO31661Alpha2` | Checks if the string is a valid [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) officially assigned country code | 
-| `iso/ISO31661Alpha3` | Checks if the string is a valid [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) officially assigned country code |                                             | 
+| `ISO31661Alpha2` | Checks if the string is a valid [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) officially assigned country code | 
+| `ISO31661Alpha3` | Checks if the string is a valid [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) officially assigned country code |                                             | 
 | **Currency**                                                                                                                           |
-| `currency/bitcoin` | Checks if the string is a valid BTC address                                                                     | 
-| `currency/ethereum`| Checks if the string is an Ethereum address using basic regex. Does not validate address checksums              | 
+| `bitcoin` | Checks if the string is a valid BTC address                                                                     | 
+| `ethereum`| Checks if the string is an Ethereum address using basic regex. Does not validate address checksums              | 
 | **Hash**                                                                                                                           |
-| `hash/md4` | Checks if the string is a valid md4 algorithm                                                                              | 
-| `hash/md5` | Checks if the string is a valid md5 algorithm                                                                              | 
-| `hash/sha1` | Checks if the string is a valid sha1 algorithm                                                                            | 
-| `hash/sha256` | Checks if the string is a valid sha256 algorithm                                                                        | 
-| `hash/sha384` | Checks if the string is a valid sha384 algorithm                                                                        | 
-| `hash/sha512` | Checks if the string is a valid sha512 algorithm                                                                        | 
+| `md4` | Checks if the string is a valid md4 algorithm                                                                              | 
+| `md5` | Checks if the string is a valid md5 algorithm                                                                              | 
+| `sha1` | Checks if the string is a valid sha1 algorithm                                                                            | 
+| `sha256` | Checks if the string is a valid sha256 algorithm                                                                        | 
+| `sha384` | Checks if the string is a valid sha384 algorithm                                                                        | 
+| `sha512` | Checks if the string is a valid sha512 algorithm                                                                        | 
 
 ## 📢 Compatibility
 
