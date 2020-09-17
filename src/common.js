@@ -3,34 +3,20 @@
 // https://github.com/vuelidate/vuelidate/blob/master/src/validators/common.js
 import { isString } from './utils/types';
 
-// "required" core, used in almost every validator to allow empty values
-const req = (value) => {
-  if (Array.isArray(value)) return !!value.length
-  if (value === undefined || value === null) {
-    return false;
+// Import rules from given path.
+function lazy(alias) {
+  const rules = require('../config/register-rules.json');
+  if(!rules.hasOwnProperty(alias)) {
+    throw new TypeError(`No such validator '${alias}' exists.`);
   }
-
-  if (value === false) {
-    return true;
-  }
-
-  if (value instanceof Date) {
-    // invalid date won't pass
-    return !isNaN(value.getTime());
-  }
-
-  if (typeof value === 'object') {
-    for (let _ in value) return true;
-    return false;
-  }
-
-  return !!String(value).length;
+  const realPath = new String(rules[alias]).replace('root:', './');
+  return require(realPath);
 }
 
-// list of errors provied by Reactrix.
-const stackError = [];
-
 export function validateRules(fieldVal, rules) {
+
+  // list of errors provied by Reactrix.
+  const stackError = [];
 
   if (!isString(rules)) {
     throw new TypeError('Rule must be string (see docs)');
@@ -39,28 +25,31 @@ export function validateRules(fieldVal, rules) {
   const splitPipe = rules.split('|');
   // push errors.
   splitPipe.forEach(rule => {
-    if (hasValue(rule)) {
-      const getRuleExp = require('./' + rule);
-      if (!getRuleExp(fieldVal)) {
-        stackError = [...stackError, rules];
+    if (!hasValue(rule)) {
+      const getRuleExp = lazy(rule);
+      //
+      if(!getRuleExp.default(fieldVal)) {
+        stackError.push(rule);
       }
     }
   });
 
+  return stackError;
+
 }
 
 // return the error length.
-export function getStackError() {
+export function getStackError(stackError) {
   return stackError.length;
 }
 
 // example: min:39, max:20.
-function hasValue(arr) {
+export function hasValue(arr) {
   return arr.indexOf(':') !== -1;
 }
 
 export const regex = (type, expr) => (value) => {
-  return !req(value) || expr.test(value);
+  return expr.test(value);
 }
 
 export const assertExp = (type, cb) => (value) => {
