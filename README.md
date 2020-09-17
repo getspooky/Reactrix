@@ -14,7 +14,7 @@ Validation is the most important aspect while designing an application. It valid
 ## Features
 
 - 🤗 Familiar and easy to setup.
-- 🌍 i18n Support and error Messages in 30+ locales.
+- 🌍 i18n Support and error Messages in different locales.
 - 👊 Written in JavaScript.
 - 🗃 No dependencies.
 
