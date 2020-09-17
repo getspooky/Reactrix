@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { validateRules } from './common';
 import { isObject, isNullOrUndefined } from './utils/types';
 
-function useValidate(initStateValue = null) {
+export function useValidate(initStateValue = null) {
 
    const [msg, setMsg] = useState([]);
 
@@ -15,9 +15,9 @@ function useValidate(initStateValue = null) {
 
      // Starts the validation process.
      for (const [key, value] of Object.entries(rules)) {
-        const { message } = validateRules(data[key], value);
+        const message = validateRules(data[key], value);
         // push message state.
-        setMsg([...msg, message]);
+        setMsg([...msg, ...message]);
      }
 
    };
@@ -25,5 +25,3 @@ function useValidate(initStateValue = null) {
    return [ msg, setValidator ];
 
 }
-
-export default useValidate;
