@@ -23,3 +23,8 @@ export function isCallable(fn) {
 export function isString(arr) {
   return typeof arr === 'string';
 }
+
+// Check if given object has own property.
+export function isHasOwnProperty(obj, key) {
+  return isObject(obj) && obj.hasOwnProperty(key);
+}
