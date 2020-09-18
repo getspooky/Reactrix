@@ -1,5 +1,5 @@
 // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
-import { isString } from './utils/types';
+import { isHasOwnProperty, isString } from './utils/types';
 
 // Import rules from given path.
 function lazy(alias) {
@@ -13,7 +13,13 @@ function lazy(alias) {
 }
 
 // validate given input.
-export function validateRules({ fieldKey, fieldVal }, rules, language) {
+export function validateRules(input, rules, language = 'en') {
+
+  if(!isHasOwnProperty(input, 'fieldKey')) {
+    input = { fieldKey: 'V' , fieldVal: input };
+  }
+
+  const { fieldKey, fieldVal } = input;
 
   // list of errors provied by Reactrix.
   const stackError = [];
@@ -25,7 +31,6 @@ export function validateRules({ fieldKey, fieldVal }, rules, language) {
   const splitPipe = rules.split('|');
   // push errors.
   splitPipe.forEach(rule => {
-    if (!hasValue(rule)) {
       const getRuleExp = lazy(rule);
       //
       if(!getRuleExp.default(fieldVal)) {
@@ -33,7 +38,6 @@ export function validateRules({ fieldKey, fieldVal }, rules, language) {
                          .replace('{{input}}', fieldKey);
         stackError.push(msgError);
       }
-    }
   });
 
   return stackError;
@@ -44,7 +48,7 @@ export function validateRules({ fieldKey, fieldVal }, rules, language) {
 function getTranslator(rule, currentLng) {
   const { lang } = require('../config/register-lang.json');
   if(!lang.hasOwnProperty(currentLng)) {
-    throw new TypeError(`Reactrix does not support ${lang} yet`);
+    throw new TypeError(`Reactrix does not support ${currentLng} yet`);
   }
   const { messages } = require(`../locale/${lang[currentLng]}`);
   return new String(messages[rule]);
