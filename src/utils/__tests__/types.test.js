@@ -1,4 +1,4 @@
-import { isCallable, isEmptyArray, isNullOrUndefined, isObject,isString } from '../types';
+import { isCallable, isEmptyArray, isNullOrUndefined, isObject, isString, isHasOwnProperty } from '../types';
 
 test('validates that the value is a callable function', () => {
   // valid.
@@ -31,3 +31,10 @@ test('validates that the value is null or undefined', () => {
   expect(isNullOrUndefined(null)).toBe(true);
 });
 
+test('validates that the value is an object and have X property', () => {
+  const obj = {a: '2'};
+  // valid.
+  expect(isHasOwnProperty(obj,'a')).toBe(true);
+  expect(isHasOwnProperty(obj,'c')).toBe(false);
+
+});
