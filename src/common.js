@@ -7,11 +7,13 @@ function lazy(alias) {
   if(!rules.hasOwnProperty(alias)) {
     throw new TypeError(`No such validator '${alias}' exists.`);
   }
-  const realPath = new String(rules[alias]).replace('root:', './');
+  const realPath = new String(rules[alias])
+                  .replace('root:', './');
   return require(realPath);
 }
 
-export function validateRules(fieldVal, rules) {
+// validate given input.
+export function validateRules({ fieldKey, fieldVal }, rules) {
 
   // list of errors provied by Reactrix.
   const stackError = [];
@@ -27,7 +29,8 @@ export function validateRules(fieldVal, rules) {
       const getRuleExp = lazy(rule);
       //
       if(!getRuleExp.default(fieldVal)) {
-        const msgError = getTranslator(rule, 'en');
+        const msgError = getTranslator(rule, 'en')
+                         .replace('{{input}}', fieldKey);
         stackError.push(msgError);
       }
     }
