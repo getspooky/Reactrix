@@ -39,9 +39,5 @@
     "minLength": "root:math/minLength",
     "ISO31661Alpha2" : "root:iso/ISO31661Alpha2",
     "ISO31661Alpha3" : "root:iso/ISO31661Alpha3"
- },
- "language": {
-   "en" : "en.json",
-   "fr" : "fr.json"
  }
 }
