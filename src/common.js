@@ -3,7 +3,7 @@ import { isString } from './utils/types';
 
 // Import rules from given path.
 function lazy(alias) {
-  const rules = require('../config/register-rules.json');
+  const { rules } = require('../config/register-rules.json');
   if(!rules.hasOwnProperty(alias)) {
     throw new TypeError(`No such validator '${alias}' exists.`);
   }
@@ -27,13 +27,24 @@ export function validateRules(fieldVal, rules) {
       const getRuleExp = lazy(rule);
       //
       if(!getRuleExp.default(fieldVal)) {
-        stackError.push(rule);
+        const msgError = getTranslator(rule, 'en');
+        stackError.push(msgError);
       }
     }
   });
 
   return stackError;
 
+}
+
+// translate given validator.
+function getTranslator(rule, currentLng) {
+  const { lang } = require('../config/register-lang.json');
+  if(!lang.hasOwnProperty(currentLng)) {
+    throw new TypeError(`Reactrix does not support ${lang} yet`);
+  }
+  const { messages } = require(`../locale/${lang[currentLng]}`);
+  return new String(messages[rule]);
 }
 
 // return the error length.
