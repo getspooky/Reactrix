@@ -32,11 +32,6 @@
     "sha256"   : "root:hash/sha256",
     "sha384"   : "root:hash/sha384",
     "sha512"   : "root:hash/sha512",
-    "equals"   : "root:math/sha512",
-    "max"      : "root:math/max",
-    "maxLength": "root:math/maxLength",
-    "min"      : "root:math/min",
-    "minLength": "root:math/minLength",
     "ISO31661Alpha2" : "root:iso/ISO31661Alpha2",
     "ISO31661Alpha3" : "root:iso/ISO31661Alpha3"
  }
