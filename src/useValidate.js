@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { validateRules } from './common';
 import { isObject, isNullOrUndefined } from './utils/types';
 
-export function useValidate(initStateValue = null) {
+export function useValidate(initLanguage = 'en') {
 
    const [msg, setMsg] = useState([]);
 
@@ -15,7 +15,7 @@ export function useValidate(initStateValue = null) {
 
      // Starts the validation process.
      for (const [key, value] of Object.entries(rules)) {
-        const message = validateRules(data[key], value);
+        const message = validateRules(data[key], value, initLanguage);
         // push message state.
         setMsg(previousState => [...previousState,...message]);
      }
