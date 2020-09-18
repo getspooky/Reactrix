@@ -1,4 +1,4 @@
-# ⚛️ Reactrix
+# 🦄 Reactrix
 
 Validation is the most important aspect while designing an application. It validates the incoming data. Reactrix provides a convenient method `useValidate` to validate incoming data with a variety of powerful validation rules.
 
