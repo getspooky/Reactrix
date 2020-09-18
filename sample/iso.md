@@ -26,6 +26,7 @@ function Reactrix() {
   return (
     <>
       <input type="text" name="test" onChange={handleChange} />
+      <button type="submit" onClick={handleSubmit}>Test Now</button>  
     </>
   )
 
