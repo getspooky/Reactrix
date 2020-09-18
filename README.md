@@ -42,7 +42,7 @@ import { useValidator } from 'reactrix';
 
 function Login(props) {
   const [data, setData] = useState({});
-  const [msg, setValidator] = useValidator(null);
+  const [msg, setValidator] = useValidator();
   
   const handleChange = (event) => {
     setData({
