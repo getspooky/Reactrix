@@ -83,6 +83,13 @@ function Login(props) {
 
 > 💅 You can use custom react component or ui library like `react-bootstrap` to display error messages.
 
+Reactrix  has built-in localization support for validation messages.
+The default language for Reactrix is `en` in order to set the locale you pass the locale key/code to the localize method:
+
+```js
+const [msg, setValidator] = useValidator('fr');
+```
+
 ## 🚦Common Rules 
 
 | Keyword          |      Description                                                                                                | 
