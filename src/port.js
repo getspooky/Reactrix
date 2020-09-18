@@ -1,3 +1,3 @@
 // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
 import { regex } from './common';
-export default regex('base64', /^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)/);
+export default regex('port', new RegExp(':(\\d{2,5})', 'g'));
