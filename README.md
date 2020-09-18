@@ -110,12 +110,6 @@ function Login(props) {
 | `undefined`      | Checks if the string is undefined                                                                               |
 | `uppercase`      | Checks if the string is uppercase                                                                               |
 | `url`            | Checks if the string is url                                                                                     |
-| **Math**                                                                                                                           |
-| `equals`         | Checks if value equals ("===") comparison.                                                                      | 
-| `max`            | Checks if the given number is less than or equal to given number                                                | 
-| `MaxLength`      | Checks if the string's length is not more than given number                                                     | 
-| `min`            | Checks if the given number is more than or equal to given number                                                | 
-| `MinLength`      | Checks if the given number is less than or equal to given number                                                | 
 | **ISO**                                                                                                                            |
 | `ISO31661Alpha2` | Checks if the string is a valid [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) officially assigned country code | 
 | `ISO31661Alpha3` | Checks if the string is a valid [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) officially assigned country code |                                             | 
