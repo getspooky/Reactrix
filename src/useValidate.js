@@ -17,7 +17,7 @@ export function useValidate(initStateValue = null) {
      for (const [key, value] of Object.entries(rules)) {
         const message = validateRules(data[key], value);
         // push message state.
-        setMsg([...msg, ...message]);
+        setMsg(previousState => [...previousState,...message]);
      }
 
    };
