@@ -34,11 +34,11 @@ npm install reactrix --save
 
 ## 🏷 Usage
 
-First of all let's define some validations in React components
+Let's define some validations in React components
 
 ```jsx
 import React, { useState } from 'react';
-import { useValidator, AlertComponent } from 'reactrix';
+import { useValidator } from 'reactrix';
 
 function Login(props) {
   const [data, setData] = useState({});
@@ -74,7 +74,6 @@ function Login(props) {
           <button type="submit" onClick={handleSubmit}>Login</button>     
           Forgot <a href="#"> password? </a>   
         </div>
-        <AlertComponent msg={msg} lang={'en'}  />
     </form>
   );
   
@@ -82,6 +81,7 @@ function Login(props) {
 
 ```
 
+> 💅 You can use custom react component or ui library like `react-bootstrap` to display error messages.
 
 ## 🚦Common Rules 
 
