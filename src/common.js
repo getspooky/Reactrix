@@ -13,7 +13,7 @@ function lazy(alias) {
 }
 
 // validate given input.
-export function validateRules({ fieldKey, fieldVal }, rules) {
+export function validateRules({ fieldKey, fieldVal }, rules, language) {
 
   // list of errors provied by Reactrix.
   const stackError = [];
@@ -29,7 +29,7 @@ export function validateRules({ fieldKey, fieldVal }, rules) {
       const getRuleExp = lazy(rule);
       //
       if(!getRuleExp.default(fieldVal)) {
-        const msgError = getTranslator(rule, 'en')
+        const msgError = getTranslator(rule, language)
                          .replace('{{input}}', fieldKey);
         stackError.push(msgError);
       }
