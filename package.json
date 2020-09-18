@@ -2,7 +2,8 @@
   "name": "reactrix",
   "version": "1.0.0",
   "description": "Simple, lightweight model-based validation for React",
-  "main": "index.js",
+  "main": "dist/reactrix.cjs.js",
+  "module": "dist/reactrix.esm.js",
   "engines": {
     "node": ">=10",
     "npm": ">=6"
@@ -15,7 +16,7 @@
     "test:update": "npm test -- --updateSnapshot --coverage",
     "validate": "kcd-scripts validate"
   },
-  "author": "",
+  "author": "Yasser Ameur El Idrissi",
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.11.2"
