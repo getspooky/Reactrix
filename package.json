@@ -18,6 +18,9 @@
   },
   "author": "Yasser Ameur El Idrissi",
   "license": "MIT",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@babel/runtime": "^7.11.2"
   },
