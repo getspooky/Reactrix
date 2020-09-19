@@ -90,6 +90,12 @@ The default language for Reactrix is `en` in order to set the locale you pass th
 const [msg, setValidator] = useValidator('fr');
 ```
 
+## 🌍 Supported Locales
+
+Reactrix support `english` and `french` languages. This is visible in the `register-lang` json file, which can be found in the config directory.
+Therefore, if you want to use multiple languages, you will have to add them to the resources. 
+
+
 ## 🚦Common Rules 
 
 | Keyword          |      Description                                                                                                | 
