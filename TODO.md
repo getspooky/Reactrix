@@ -1,6 +1,6 @@
 ## TODO
 
-Hash Algorithm
+## Hash Algorithm
 
 * SHA512
 * SHA512/224
@@ -15,3 +15,14 @@ Hash Algorithm
 ## Translations
 
 * Support other languages like **Arabic**, **Germany**, **Spain** etc
+
+## Add More Rules
+
+* oneOf 
+* equal
+* max
+* min
+* maxLength
+* minLength
+* between
+
