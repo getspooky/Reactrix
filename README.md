@@ -1,6 +1,6 @@
-# 🦄 Reactrix
-
-Validation is the most important aspect while designing an application. It validates the incoming data. Reactrix provides a convenient method `useValidate` to validate incoming data with a variety of powerful validation rules.
+<p style="text-align=left;">
+  <img src="./logo.png">
+</p>
 
 <p align="left">
 <img alt="GitHub version" src="https://img.shields.io/github/v/release/getspooky/useValidator?style=for-the-badge">
@@ -8,6 +8,10 @@ Validation is the most important aspect while designing an application. It valid
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/getspooky/useValidator?style=for-the-badge">
 <img alt="GitHub issues" src="https://img.shields.io/github/issues/getspooky/useValidator?style=for-the-badge">
 </p>
+
+
+Validation is the most important aspect while designing an application. It validates the incoming data. Reactrix provides a convenient method `useValidate` to validate incoming data with a variety of powerful validation rules.
+
 
 > Simple, lightweight model-based validation for React Hooks Inspired by [PHP Framework Laravel's validation](https://laravel.com/)
 
