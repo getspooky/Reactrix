@@ -35,3 +35,16 @@ test('Should return array with message', () => {
   expect(result.current[0].length).toBe(2);
 });
 
+test('Should return message with supported locales', () => {
+  const { result } = renderHook(() => useValidate('en'));
+  data = {
+    name: 12333,
+  };
+  act(() => {
+    result.current[1](data, {
+      name: 'string',
+    });
+  });
+  expect(result.current[0]).toContain('The V field must be a string');
+});
+
