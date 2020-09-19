@@ -33,6 +33,6 @@
     "sh1"            : "Le champ {{input}} doit être un algorithme sh1 valide",
     "sha256"         : "Le champ {{input}} doit être un algorithme sha256 valide",
     "sha384"         : "Le champ {{input}} doit être un algorithme sha384 valide",
-    "sha512"         : "Le champ {{input}} doit être un algorithme sha512 valide",
+    "sha512"         : "Le champ {{input}} doit être un algorithme sha512 valide"
   }
 }
