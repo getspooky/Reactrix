@@ -2,11 +2,11 @@
 
 ```js
 import React, { useState } from 'react';
-import { useValidator } from 'reactrix';
+import { useValidate } from 'reactrix';
 
 function Reactrix() {
   const [data, setData] = useState({});
-  const [msg, setValidator] = useValidator();
+  const [msg, setValidator] = useValidate();
 
   const handleChange = (event) => {
     setData({
