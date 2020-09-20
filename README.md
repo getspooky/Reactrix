@@ -4,10 +4,10 @@
 
 
 <p align="left">
-<img alt="GitHub version" src="https://img.shields.io/github/v/release/getspooky/useValidator?style=for-the-badge">
-<img alt="GitHub" src="https://img.shields.io/github/license/getspooky/useValidator?style=for-the-badge">
-<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/getspooky/useValidator?style=for-the-badge">
-<img alt="GitHub issues" src="https://img.shields.io/github/issues/getspooky/useValidator?style=for-the-badge">
+<img alt="GitHub version" src="https://img.shields.io/github/v/release/getspooky/Reactrix?style=for-the-badge">
+<img alt="GitHub" src="https://img.shields.io/github/license/getspooky/Reactrix?style=for-the-badge">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/getspooky/Reactrix?style=for-the-badge">
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/getspooky/Reactrix?style=for-the-badge">
 </p>
 
 
