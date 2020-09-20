@@ -89,7 +89,7 @@ Reactrix  has built-in localization support for validation messages.
 The default language for Reactrix is `en` in order to set the locale you pass the locale key/code to the localize method:
 
 ```js
-const [msg, setValidator] = useValidator('fr');
+const [msg, setValidator] = useValidate('fr');
 ```
 
 ## 🌍 Supported Locales
@@ -97,6 +97,33 @@ const [msg, setValidator] = useValidator('fr');
 Reactrix support `english` and `french` languages. This is visible in the `register` javascript file, which can be found in the `src` directory.
 Therefore, if you want to use multiple languages, you will have to add them to the locale folder. 
 
+> All the language files should return an array of keyed strings as shown below.
+
+**Step1** - Create 2 files for languages − Spanish,  German. Save Arabic file at locale/de.json
+
+```json
+{
+  "messages": {
+    "alpha": "{{input}} darf nur alphabetische Zeichen enthalten"
+  }
+}
+```
+
+```json
+{
+  "messages": {
+    "alpha": "El campo {{input}} solo debe contener letras"
+  }
+}
+```
+
+**Step2** - Export spanish and German languages from `src/register.js`
+
+```js
+// export all Reactrix supported locales.
+export { default as de } from '../locale/german.json';
+export { default as es } from '../locale/spanish.json';
+```
 
 ## 🚦Common Rules 
 
