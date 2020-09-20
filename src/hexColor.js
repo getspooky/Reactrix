@@ -1,3 +1,3 @@
 // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
-import { regex } from './common';
-export default regex('hexColor', /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/);
+import { assertRegex } from './utils/assert';
+export default assertRegex(/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/);

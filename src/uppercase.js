@@ -1,3 +1,3 @@
 // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
-import { assertExp } from './common';
-export default assertExp('uppercase', (val) => val === val.toUpperCase());
+import { assertCustomRegex } from './utils/assert';
+export default assertCustomRegex(val => val === val.toUpperCase());

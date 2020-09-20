@@ -1,4 +1,4 @@
 // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
-import { assertExp } from './common';
+import { assertCustomRegex } from './utils/assert';
 import { isCallable } from './utils/types';
-export default assertExp('function', (val) => isCallable(val));
+export default assertCustomRegex(val => isCallable(val));

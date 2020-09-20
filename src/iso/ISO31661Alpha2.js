@@ -1,6 +1,6 @@
 // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
 import { includes } from '../utils/includes';
-import { assertExp } from '../common';
+import { assertCustomRegex } from '../utils/assert';
 // from https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 const validISO31661Alpha2CountriesCodes = [
   'AD', 'AE', 'AF', 'AG', 'AI', 'AL', 'AM', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AW', 'AX', 'AZ',
@@ -30,4 +30,4 @@ const validISO31661Alpha2CountriesCodes = [
   'ZA', 'ZM', 'ZW',
 ];
 
-export default assertExp('ISO31661Alpha2', (val) => includes(validISO31661Alpha2CountriesCodes, val.toUpperCase()));
+export default assertCustomRegex(val => includes(validISO31661Alpha2CountriesCodes, val.toUpperCase()));
