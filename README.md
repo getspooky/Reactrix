@@ -40,11 +40,11 @@ Let's define some validations in React components
 
 ```jsx
 import React, { useState } from 'react';
-import { useValidator } from 'reactrix';
+import { useValidate } from 'reactrix';
 
 function Login(props) {
   const [data, setData] = useState({});
-  const [msg, setValidator] = useValidator();
+  const [msg, setValidator] = useValidate();
   
   const handleChange = (event) => {
     setData({
@@ -94,8 +94,8 @@ const [msg, setValidator] = useValidator('fr');
 
 ## 🌍 Supported Locales
 
-Reactrix support `english` and `french` languages. This is visible in the `register-lang` json file, which can be found in the config directory.
-Therefore, if you want to use multiple languages, you will have to add them to the resources. 
+Reactrix support `english` and `french` languages. This is visible in the `register` javascript file, which can be found in the `src` directory.
+Therefore, if you want to use multiple languages, you will have to add them to the locale folder. 
 
 
 ## 🚦Common Rules 
