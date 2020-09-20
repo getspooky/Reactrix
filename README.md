@@ -1,4 +1,7 @@
-# 🐿 Reactrix
+<p style="text-align=left;">
+<img src="https://drive.google.com/uc?id=1vurW-5ayyIW32Gl5SgaZgu64ZUbk-XOK">
+</p>
+
 
 <p align="left">
 <img alt="GitHub version" src="https://img.shields.io/github/v/release/getspooky/useValidator?style=for-the-badge">
