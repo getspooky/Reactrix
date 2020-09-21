@@ -1,6 +1,6 @@
 {
   "name": "reactrix",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Simple, lightweight model-based validation for React",
   "main": "dist/reactrix.cjs.js",
   "module": "dist/reactrix.esm.js",
@@ -17,6 +17,13 @@
     "validate": "kcd-scripts validate"
   },
   "author": "Yasser Ameur El Idrissi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getspooky/Reactrix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/getspooky/Reactrix/issues"
+  },
   "license": "MIT",
   "files": [
     "dist"
