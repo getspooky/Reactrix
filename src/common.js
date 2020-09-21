@@ -33,7 +33,6 @@ export function validateRules(input, rules, lang = 'en') {
     if(!getRuleExp(fieldVal)) {
       // translate given validator.
       const msgError = new String(Register[lang].messages[rule]);
-      console.log("Hello");
       stackError.push(msgError.replace('{{input}}', fieldKey));
     }
   });
