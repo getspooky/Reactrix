@@ -139,9 +139,11 @@ export { default as es } from '../locale/spanish.json';
 | `base32`         | Checks if a string is base32 encoded                                                                            | 
 | `base64`         | Checks if a string is base64 encoded                                                                            | 
 | `boolean`        | Checks if a value is a boolean                                                                                  | 
+| `creditCard`        | Checks if the string is a credit card                                            | 
 | `date`           | Checks if a value is a date                                                                                     | 
 | `decimal`        | Checks if a value is a decimal                                                                                  | 
 | `email`          | Checks if the string is an email                                                                                | 
+| `ean`          | Checks if the string is an EAN(European Article Number)                                                                                | 
 | `function`       | Checks if the object is function                                                                                |  
 | `hexColor`       | Checks if the string is a hexadecimal color                                                                     | 
 | `integer`        | Checks if the value is an integer number                                                                        | 
@@ -151,6 +153,7 @@ export { default as es } from '../locale/spanish.json';
 | `numeric`        | Checks if a value is a number                                                                                   | 
 | `object`         | Checks if a value is an object                                                                                  |
 | `port`           | Checks if the string is a Port                                                                                  |
+| `postal`         | Checks if the string is a postal code. Supported locales are (`[ 'AD', 'AT', 'AU', 'AZ', 'BE', 'BG', 'BR', 'CA', 'CH', 'CZ', 'DE', 'DK', 'DZ', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'ID', 'IE' 'IL', 'IN', 'IR', 'IS', 'IT', 'JP', 'KE', 'LI', 'LT', 'LU', 'LV', 'MT', 'MX', 'NL', 'NO', 'NP', 'NZ', 'PL', 'PR', 'PT', 'RO', 'RU', 'SA', 'SE', 'SI', 'TN', 'TW', 'UA', 'US', 'ZA', 'ZM' ]`) or `any`.                                                                  |
 | `string`         | Checks if the string is a string                                                                                |
 | `undefined`      | Checks if the string is undefined                                                                               |
 | `uppercase`      | Checks if the string is uppercase                                                                               |
