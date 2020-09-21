@@ -8,6 +8,10 @@
 <img alt="GitHub" src="https://img.shields.io/github/license/getspooky/Reactrix?style=for-the-badge">
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/getspooky/Reactrix?style=for-the-badge">
 <img alt="GitHub issues" src="https://img.shields.io/github/issues/getspooky/Reactrix?style=for-the-badge">
+<img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/getspooky/Reactrix?style=for-the-badge">
+<img alt="node-current" src="https://img.shields.io/node/v/reactrix?style=for-the-badge">
+  
+<img alt="npm" src="https://img.shields.io/npm/dy/reactrix?style=for-the-badge">
 </p>
 
 
