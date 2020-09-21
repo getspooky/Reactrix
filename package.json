@@ -8,6 +8,15 @@
     "node": ">=10",
     "npm": ">=6"
   },
+  "keywords": [
+    "react",
+    "react hooks",
+    "validation library",
+    "validation",
+    "validator",
+    "inputs",
+    "form"
+  ],
   "scripts": {
     "build": "kcd-scripts build --bundle",
     "setup": "npm install && npm run validate -s",
