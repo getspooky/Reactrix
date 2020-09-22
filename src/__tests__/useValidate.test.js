@@ -45,6 +45,6 @@ test('Should return message with supported locales', () => {
       name: 'string',
     });
   });
-  expect(result.current[0]).toContain('The V field must be a string');
+  expect(result.current[0]).toContain('The name field must be a string');
 });
 
