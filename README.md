@@ -150,6 +150,7 @@ export { default as es } from '../locale/spanish.json';
 | `mimeType`       | Checks if the string matches to a valid [MIME type](https://en.wikipedia.org/wiki/Media_type) format            | 
 | `numeric`        | Checks if a value is a number                                                                                   | 
 | `object`         | Checks if a value is an object                                                                                  |
+| `octal`          | Checks if a value is an octal                                                                                   |
 | `port`           | Checks if the string is a Port                                                                                  |
 | `postal`         | Checks if the string is a postal code. Supported locales are (`[ 'AD', 'AT', 'AU', 'AZ', 'BE', 'BG', 'BR', 'CA', 'CH', 'CZ', 'DE', 'DK', 'DZ', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'ID', 'IE' 'IL', 'IN', 'IR', 'IS', 'IT', 'JP', 'KE', 'LI', 'LT', 'LU', 'LV', 'MT', 'MX', 'NL', 'NO', 'NP', 'NZ', 'PL', 'PR', 'PT', 'RO', 'RU', 'SA', 'SE', 'SI', 'TN', 'TW', 'UA', 'US', 'ZA', 'ZM' ]`) or `any`.                                                                  |
 | `string`         | Checks if the string is a string                                                                                |
