@@ -96,6 +96,170 @@ var integer = assertRegex(/(^[0-9]*$)|(^-[0-9]+$)/);
 var numeric = assertRegex(/^[0-9]*$/);
 
 // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
+var creditCard = /^(?:4[0-9]{12}(?:[0-9]{3,6})?|5[1-5][0-9]{14}|(222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}|6(?:011|5[0-9][0-9])[0-9]{12,15}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11}|6[27][0-9]{14})$/;
+var creditCard$1 = assertCustomRegex(function (str) {
+  var sanitized = str.replace(/[- ]+/g, '');
+
+  if (!creditCard.test(sanitized)) {
+    return false;
+  }
+
+  var sum = 0;
+  var digit;
+  var tmpNum;
+  var shouldDouble;
+
+  for (var i = sanitized.length - 1; i >= 0; i--) {
+    digit = sanitized.substring(i, i + 1);
+    tmpNum = parseInt(digit, 10);
+
+    if (shouldDouble) {
+      tmpNum *= 2;
+
+      if (tmpNum >= 10) {
+        sum += tmpNum % 10 + 1;
+      } else {
+        sum += tmpNum;
+      }
+    } else {
+      sum += tmpNum;
+    }
+
+    shouldDouble = !shouldDouble;
+  }
+
+  return !!(sum % 10 === 0 ? sanitized : false);
+});
+
+// Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
+/**
+ * Define EAN Lenghts; 8 for EAN-8; 13 for EAN-13
+ * and Regular Expression for valid EANs (EAN-8, EAN-13),
+ * with exact numberic matching of 8 or 13 digits [0-9]
+ */
+
+var LENGTH_EAN_8 = 8;
+var validEanRegex = /^(\d{8}|\d{13})$/; // Get position weight given:
+// EAN length and digit index/position
+
+function getPositionWeightThroughLengthAndIndex(length, index) {
+  if (length === LENGTH_EAN_8) {
+    return index % 2 === 0 ? 3 : 1;
+  }
+
+  return index % 2 === 0 ? 1 : 3;
+} // Calculate EAN Check Digit
+// Reference: https://en.wikipedia.org/wiki/International_Article_Number#Calculation_of_checksum_digit
+
+
+function calculateCheckDigit(ean) {
+  var checksum = ean.slice(0, -1).split('').map(function (char, index) {
+    return Number(char) * getPositionWeightThroughLengthAndIndex(ean.length, index);
+  }).reduce(function (acc, partialSum) {
+    return acc + partialSum;
+  }, 0);
+  var remainder = 10 - checksum % 10;
+  return remainder < 10 ? remainder : 0;
+}
+/**
+ * Check if string is valid EAN: Matches EAN-8/EAN-13 regex
+ * Has valid check digit.
+ */
+
+
+var ean = assertCustomRegex(function (str) {
+  var actualCheckDigit = Number(str.slice(-1));
+  return validEanRegex.test(str) && actualCheckDigit === calculateCheckDigit(str);
+});
+
+// Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
+
+var threeDigit = /^\d{3}$/;
+var fourDigit = /^\d{4}$/;
+var fiveDigit = /^\d{5}$/;
+var sixDigit = /^\d{6}$/;
+var patterns = {
+  AD: /^AD\d{3}$/,
+  AT: fourDigit,
+  AU: fourDigit,
+  AZ: /^AZ\d{4}$/,
+  BE: fourDigit,
+  BG: fourDigit,
+  BR: /^\d{5}-\d{3}$/,
+  CA: /^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][\s\-]?\d[ABCEGHJ-NPRSTV-Z]\d$/i,
+  CH: fourDigit,
+  CZ: /^\d{3}\s?\d{2}$/,
+  DE: fiveDigit,
+  DK: fourDigit,
+  DZ: fiveDigit,
+  EE: fiveDigit,
+  ES: /^(5[0-2]{1}|[0-4]{1}\d{1})\d{3}$/,
+  FI: fiveDigit,
+  FR: /^\d{2}\s?\d{3}$/,
+  GB: /^(gir\s?0aa|[a-z]{1,2}\d[\da-z]?\s?(\d[a-z]{2})?)$/i,
+  GR: /^\d{3}\s?\d{2}$/,
+  HR: /^([1-5]\d{4}$)/,
+  HU: fourDigit,
+  ID: fiveDigit,
+  IE: /^(?!.*(?:o))[A-z]\d[\dw]\s\w{4}$/i,
+  IL: /^(\d{5}|\d{7})$/,
+  IN: /^((?!10|29|35|54|55|65|66|86|87|88|89)[1-9][0-9]{5})$/,
+  IS: threeDigit,
+  IT: fiveDigit,
+  JP: /^\d{3}\-\d{4}$/,
+  KE: fiveDigit,
+  LI: /^(948[5-9]|949[0-7])$/,
+  LT: /^LT\-\d{5}$/,
+  LU: fourDigit,
+  LV: /^LV\-\d{4}$/,
+  MX: fiveDigit,
+  MT: /^[A-Za-z]{3}\s{0,1}\d{4}$/,
+  NL: /^\d{4}\s?[a-z]{2}$/i,
+  NO: fourDigit,
+  NP: /^(10|21|22|32|33|34|44|45|56|57)\d{3}$|^(977)$/i,
+  NZ: fourDigit,
+  PL: /^\d{2}\-\d{3}$/,
+  PR: /^00[679]\d{2}([ -]\d{4})?$/,
+  PT: /^\d{4}\-\d{3}?$/,
+  RO: sixDigit,
+  RU: sixDigit,
+  SA: fiveDigit,
+  SE: /^[1-9]\d{2}\s?\d{2}$/,
+  SI: fourDigit,
+  SK: /^\d{3}\s?\d{2}$/,
+  TN: fourDigit,
+  TW: /^\d{3}(\d{2})?$/,
+  UA: fiveDigit,
+  US: /^\d{5}(-\d{4})?$/,
+  ZA: fourDigit,
+  ZM: fiveDigit
+}; // list of locales.
+
+var codePostal = assertCustomRegex(function (str) {
+  var _str$split = str.split(':'),
+      locale = _str$split[0],
+      value = _str$split[1];
+
+  if (locale in patterns) {
+    return patterns[locale].test(value);
+  } else if (locale === 'any') {
+    for (var key in patterns) {
+      // https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md#ignoring-code-for-coverage-purposes
+      // istanbul ignore else
+      if (patterns.hasOwnProperty(key)) {
+        var pattern = patterns[key];
+
+        if (pattern.test(str)) {
+          return true;
+        }
+      }
+    }
+
+    return false;
+  }
+});
+
+// Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
 var date = assertCustomRegex(function (val) {
   return val instanceof Date;
 });
@@ -175,9 +339,11 @@ var messages = {
   base32: "The {{input}} field must be base32 encoded",
   base64: "The {{input}} field must be base64 encoded",
   boolean: "The {{input}} field must be a boolean",
+  creditCard: "The {{input}} field must be a credit card",
   date: "The {{input}} field must be a valid date",
   decimal: "The {{input}} field must be a decimal",
   email: "The {{input}} field must be a valid email",
+  ean: "The {{input}} field must be a European Article Number",
   "function": "The {{input}} field must be a function",
   hexColor: "The {{input}} field must be a valid hex color",
   integer: "The {{input}} field must be an integer",
@@ -187,6 +353,7 @@ var messages = {
   numeric: "The {{input}} field must be a numeric",
   object: "The {{input}} field must be a object",
   port: "The {{input}} field must be a valid port",
+  postal: "THe {{input}} field must be a postal code",
   string: "The {{input}} field must be a string",
   "undefined": "The {{input}} field must be an undefined",
   uppercase: "The {{input}} field must be an uppercase",
@@ -215,9 +382,11 @@ var messages$1 = {
   base32: "Le champ {{input}} doit être encodé en base32",
   base64: "Le champ {{input}} doit être encodé en base64",
   boolean: "Le champ {{input}} doit être un booléen",
+  creditCard: "Le champ {{input}} doit être une carte de crédit",
   date: "Le champ {{input}} doit être une date valide",
   decimal: "Le champ {{input}} doit être un décimal",
   email: "Le champ {{input}} doit être une adresse e-mail valide",
+  ean: "Le champ {{input}} doit être un Numéro d'article européen",
   "function": "Le champ {{input}} doit être une fonction",
   hexColor: "Le champ {{input}} doit être une couleur hexadécimale valide",
   integer: "Le champ {{input}} doit être un entier",
@@ -227,6 +396,7 @@ var messages$1 = {
   numeric: "Le champ {{input}} doit être numérique",
   object: "Le champ {{input}} doit être un objet",
   port: "Le champ {{input}} doit être un port valide",
+  postal: "Le champ {{input}} doit être un code postal",
   string: "Le champ {{input}} doit être une chaîne",
   "undefined": "Le champ {{input}} doit être un champ non défini",
   uppercase: "Le champ {{input}} doit être en majuscule",
@@ -268,6 +438,9 @@ var Register = /*#__PURE__*/Object.freeze({
   decimal: decimal,
   integer: integer,
   numeric: numeric,
+  creditCard: creditCard$1,
+  ean: ean,
+  postal: codePostal,
   date: date,
   url: url,
   port: port,
@@ -331,7 +504,6 @@ function validateRules(input, rules, lang) {
     if (!getRuleExp(fieldVal)) {
       // translate given validator.
       var msgError = new String(Register[lang].messages[rule]);
-      console.log("Hello");
       stackError.push(msgError.replace('{{input}}', fieldKey));
     }
   });

@@ -19,6 +19,7 @@
     "mimeType"       : "The {{input}} field must be a valid MIME type format",
     "numeric"        : "The {{input}} field must be a numeric",
     "object"         : "The {{input}} field must be a object",
+    "octal"          : "The {{input}} field must be a octal",
     "port"           : "The {{input}} field must be a valid port",
     "postal"         : "THe {{input}} field must be a postal code",
     "string"         : "The {{input}} field must be a string",
