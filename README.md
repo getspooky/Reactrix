@@ -10,11 +10,8 @@
 <img alt="GitHub issues" src="https://img.shields.io/github/issues/getspooky/Reactrix?style=for-the-badge">
 <img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/tag/getspooky/Reactrix?style=for-the-badge">
 <img alt="node-current" src="https://img.shields.io/node/v/reactrix?style=for-the-badge">
-  
-<img alt="npm" src="https://img.shields.io/npm/dy/reactrix?style=for-the-badge">
+<img alt="npm" src="https://img.shields.io/npm/dw/reactrix?style=for-the-badge">
 </p>
-
-
 Validation is the most important aspect while designing an application. It validates the incoming data. Reactrix provides a convenient method `useValidate` to validate incoming data with a variety of powerful validation rules.
 
 
