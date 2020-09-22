@@ -1,6 +1,6 @@
 {
   "name": "reactrix",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Simple, lightweight model-based validation for React",
   "main": "dist/reactrix.cjs.js",
   "module": "dist/reactrix.esm.js",
