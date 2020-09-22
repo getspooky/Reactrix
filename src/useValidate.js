@@ -15,7 +15,10 @@ export function useValidate(defaultLanguage = 'en') {
 
      // Starts the validation process.
      for (const [key, value] of Object.entries(rules)) {
-        const message = validateRules(data[key], value, defaultLanguage);
+        const message = validateRules({
+          fieldVal: data[key],
+          fieldKey: key
+        }, value, defaultLanguage);
         // push message state.
         setMsg(previousState => [...previousState,...message]);
      }
