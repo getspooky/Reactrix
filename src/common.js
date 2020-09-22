@@ -1,9 +1,13 @@
 // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
-import { isHasOwnProperty, isString , isNullOrUndefined } from './utils/types';
+import { isHasOwnProperty, isString , isNullOrUndefined, isObject } from './utils/types';
 import * as Register from './register';
 
 // validate given input.
 export function validateRules(input, rules, lang = 'en') {
+
+  if(!isString(lang)) {
+    lang = 'en';
+  }
 
   if(isNullOrUndefined(Register[lang])) {
     throw new TypeError(`Reactrix does not support ${lang} yet`);
