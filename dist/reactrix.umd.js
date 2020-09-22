@@ -269,6 +269,9 @@
   var url = assertRegex(urlRegex);
 
   // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
+  var octal = assertRegex(/^(0o)?[0-7]+$/i);
+
+  // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
   var port = assertRegex(new RegExp(':(\\d{2,5})', 'g'));
 
   // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
@@ -352,6 +355,7 @@
     mimeType: "The {{input}} field must be a valid MIME type format",
     numeric: "The {{input}} field must be a numeric",
     object: "The {{input}} field must be a object",
+    octal: "The {{input}} field must be a octal",
     port: "The {{input}} field must be a valid port",
     postal: "THe {{input}} field must be a postal code",
     string: "The {{input}} field must be a string",
@@ -395,6 +399,7 @@
     mimeType: "Le champ {{input}} doit être un format de type MIME valide",
     numeric: "Le champ {{input}} doit être numérique",
     object: "Le champ {{input}} doit être un objet",
+    octal: "Le champ {{input}} doit être un octal",
     port: "Le champ {{input}} doit être un port valide",
     postal: "Le champ {{input}} doit être un code postal",
     string: "Le champ {{input}} doit être une chaîne",
@@ -443,6 +448,7 @@
     postal: codePostal,
     date: date,
     url: url,
+    octal: octal,
     port: port,
     email: email,
     object: object,
@@ -466,6 +472,10 @@
 
   function validateRules(input, rules, lang) {
     if (lang === void 0) {
+      lang = 'en';
+    }
+
+    if (!isString(lang)) {
       lang = 'en';
     }
 
@@ -530,7 +540,10 @@
         var _Object$entries$_i = _Object$entries[_i],
             key = _Object$entries$_i[0],
             value = _Object$entries$_i[1];
-        var message = validateRules(data[key], value, defaultLanguage); // push message state.
+        var message = validateRules({
+          fieldVal: data[key],
+          fieldKey: key
+        }, value, defaultLanguage); // push message state.
 
         setMsg(function (previousState) {
           return [].concat(previousState, message);
