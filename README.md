@@ -63,13 +63,10 @@ function Login(props) {
       email: 'required|email',
       password: 'required|string'
     }); 
-    
-    if(!msg) {
-      alert('Great ✅');
-    }
-    
+   
   }
    
+    
   return (
     <form>  
         <div className="container">   
