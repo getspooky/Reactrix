@@ -141,7 +141,8 @@ export { default as es } from '../locale/spanish.json';
 | `date`           | Checks if a value is a date                                                                                     | 
 | `decimal`        | Checks if a value is a decimal                                                                                  | 
 | `email`          | Checks if the string is an email                                                                                | 
-| `ean`          | Checks if the string is an EAN(European Article Number)                                                                                | 
+| `ean`            | Checks if the string is an EAN(European Article Number)                                                           |
+| `jwt`            | check if the string is valid JWT token.                                                        |
 | `function`       | Checks if the object is function                                                                                |  
 | `hexColor`       | Checks if the string is a hexadecimal color                                                                     | 
 | `integer`        | Checks if the value is an integer number                                                                        | 
