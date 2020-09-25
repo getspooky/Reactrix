@@ -22,6 +22,7 @@ export { default as date } from './date';
 export { default as url } from './url';
 export { default as octal } from './octal';
 export { default as port } from './port';
+export { default as jwt } from './jwt';
 export { default as email } from './email';
 export { default as object } from './object';
 export { default as slug } from './slug';
