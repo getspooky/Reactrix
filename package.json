@@ -1,7 +1,7 @@
 {
   "name": "reactrix",
-  "version": "1.0.5",
-  "description": "Simple, lightweight model-based validation for React",
+  "version": "1.0.6",
+  "description": "Validate forms in React, without the tears 😭",
   "main": "dist/reactrix.cjs.js",
   "module": "dist/reactrix.esm.js",
   "engines": {
@@ -10,9 +10,14 @@
   },
   "keywords": [
     "react",
+    "reactjs",
     "react hooks",
     "validation library",
     "validation",
+    "react-components",
+    "form-validations",
+    "react-hooks",
+    "forms",
     "validator",
     "inputs",
     "form"
