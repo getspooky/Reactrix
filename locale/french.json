@@ -34,6 +34,7 @@
     "ethereumAddress": "Le champ {{input}} doit être une adresse Ethereum valide",
     "md4"            : "Le champ {{input}} doit être un algorithme md4 valide",
     "md5"            : "Le champ {{input}} doit être un algorithme md5 valide",
+    "jwt"            : "Le champ {{input}} doit être un Json Web Token",
     "sh1"            : "Le champ {{input}} doit être un algorithme sh1 valide",
     "sha256"         : "Le champ {{input}} doit être un algorithme sha256 valide",
     "sha384"         : "Le champ {{input}} doit être un algorithme sha384 valide",

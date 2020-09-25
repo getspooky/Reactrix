@@ -35,6 +35,7 @@
     "md4"            : "The {{input}} field must be a valid md4 algorithm",
     "md5"            : "The {{input}} field must be a valid md5 algorithm",
     "sh1"            : "The {{input}} field must be a valid sh1 algorithm",
+    "jwt"            : "The {{input}} field must be a valid Json Web Token",
     "sha256"         : "The {{input}} field must be a valid sha256 algorithm",
     "sha384"         : "The {{input}} field must be a valid sha384 algorithm",
     "sha512"         : "The {{input}} field must be a valid sha512 algorithm"
