@@ -271,6 +271,20 @@ var octal = assertRegex(/^(0o)?[0-7]+$/i);
 var port = assertRegex(new RegExp(':(\\d{2,5})', 'g'));
 
 // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
+var jwt = assertCustomRegex(function (str) {
+  var dotSplit = str.split('.');
+  var len = dotSplit.length;
+
+  if (len > 3 || len < 2) {
+    return false;
+  }
+
+  return dotSplit.reduce(function (acc) {
+    return acc;
+  });
+});
+
+// Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
 var email = assertRegex(/(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/);
 
 // Copyright 2020 the Reactrix authors. All rights reserved. MIT license.
@@ -367,6 +381,7 @@ var messages = {
   md4: "The {{input}} field must be a valid md4 algorithm",
   md5: "The {{input}} field must be a valid md5 algorithm",
   sh1: "The {{input}} field must be a valid sh1 algorithm",
+  jwt: "The {{input}} field must be a valid Json Web Token",
   sha256: "The {{input}} field must be a valid sha256 algorithm",
   sha384: "The {{input}} field must be a valid sha384 algorithm",
   sha512: "The {{input}} field must be a valid sha512 algorithm"
@@ -410,6 +425,7 @@ var messages$1 = {
   ethereumAddress: "Le champ {{input}} doit être une adresse Ethereum valide",
   md4: "Le champ {{input}} doit être un algorithme md4 valide",
   md5: "Le champ {{input}} doit être un algorithme md5 valide",
+  jwt: "Le champ {{input}} doit être un Json Web Token",
   sh1: "Le champ {{input}} doit être un algorithme sh1 valide",
   sha256: "Le champ {{input}} doit être un algorithme sha256 valide",
   sha384: "Le champ {{input}} doit être un algorithme sha384 valide",
@@ -446,6 +462,7 @@ var Register = /*#__PURE__*/Object.freeze({
   url: url,
   octal: octal,
   port: port,
+  jwt: jwt,
   email: email,
   object: object,
   slug: slug,
