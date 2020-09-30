@@ -45,6 +45,8 @@ Let's define some validations in React components
 ```jsx
 import React, { useState } from 'react';
 import { useValidate } from 'reactrix';
+// Custom React Component to display messages.
+import { Alert } from './AlertComponent';
 
 function Login(props) {
   const [data, setData] = useState({});
@@ -63,12 +65,11 @@ function Login(props) {
       email: 'required|email',
       password: 'required|string'
     }); 
-   
   }
    
     
   return (
-    <form>  
+    <form onSubmit={handleSubmit}>  
         <div className="container">   
           <label>Email : </label>   
           <input type="email" placeholder="Enter Email" name="email" onChange={handleChange} />  
@@ -77,6 +78,7 @@ function Login(props) {
           <button type="submit" onClick={handleSubmit}>Login</button>     
           Forgot <a href="#"> password? </a>   
         </div>
+        <Alert data={msg} />
     </form>
   );
   
@@ -127,6 +129,9 @@ export { default as es } from '../locale/spanish.json';
 ```
 
 ## 🚦Common Rules 
+
+This is the list of all the rules you can validate form inputs against. When using multiple rules, separate them with a pipe `|`.
+
 
 | Keyword          |      Description                                                                                                | 
 |------------------|:----------------------------------------------------------------------------------------------------------------|
